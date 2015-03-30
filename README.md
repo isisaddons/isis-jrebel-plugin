@@ -122,3 +122,4 @@ Alternatively, copy one of the example `Xxx-PROTOTYPE-no-fixtures.launch` files 
 As per JRebel's documentation, it's also a good idea to disable any warnings that your IDE might generate about hot-code replacement failing.  For example, in Eclipse this is done through *Windows>Preferences*:
 
 ![](https://raw2.github.com/isisaddons/isis-jrebel-plugin/master/docs/images/disable-hot-code-replace.png)
+
