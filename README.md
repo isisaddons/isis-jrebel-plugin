@@ -1,7 +1,7 @@
 isis-jrebel-plugin
 ==================
 
-[![Build Status](https://travis-ci.org/danhaywood/isis-jrebel-plugin.png?branch=master)](https://travis-ci.org/danhaywood/isis-jrebel-plugin)
+[![Build Status](https://travis-ci.org/isisaddons/isis-jrebel-plugin.png?branch=master)](https://travis-ci.org/isisaddons/isis-jrebel-plugin)
 
 This is a plugin for [Apache Isis](http://isis.apache.org) plugin for [JRebel](http://zeroturnaround.com/software/jrebel/).  By configuring it you can develop your Isis application without having to restart the app.  You do need to run Isis in [prototype mode](http://isis.apache.org/reference/deployment-type.html).
 
@@ -49,7 +49,7 @@ Locate the `danhaywood-isis-jrebel-plugin-1.0.0-SNAPSHOT.jar` JAR file (in `targ
 
 To configure, use *Help>JRebel Config Center*, then select the `dom` project (and probably the `webapp` project too):
 
-![](https://raw2.github.com/danhaywood/isis-jrebel-plugin/master/docs/images/eclipse-jrebel-config-center.png)
+![](https://raw2.github.com/isisaddons/isis-jrebel-plugin/master/docs/images/eclipse-jrebel-config-center.png)
 
 
 
@@ -61,7 +61,7 @@ Then, the app needs to be updated to launch with the JRebel agent and the Isis-J
 
 No changes required to the main tab:
 
-![](https://raw2.github.com/danhaywood/isis-jrebel-plugin/master/docs/images/eclipse-run-config-1.png)
+![](https://raw2.github.com/isisaddons/isis-jrebel-plugin/master/docs/images/eclipse-run-config-1.png)
 
 
 ### Arguments tab
@@ -70,7 +70,7 @@ The only change required is to the JVM arguments section on the arguments tab:
 
 > **For further JRebel settings, see the [JRebel manual](http://manuals.zeroturnaround.com/jrebel/misc/index.html#agent-settings)**
 
-![](https://raw2.github.com/danhaywood/isis-jrebel-plugin/master/docs/images/eclipse-run-config-2.png)
+![](https://raw2.github.com/isisaddons/isis-jrebel-plugin/master/docs/images/eclipse-run-config-2.png)
 
 
 To dissect this:
@@ -103,7 +103,7 @@ or some other, higher, figure.
 
 The JRebel tab simply reflects the -D settings on the JVM arguments section (above)
 
-![](https://raw2.github.com/danhaywood/isis-jrebel-plugin/master/docs/images/eclipse-run-config-3.png)
+![](https://raw2.github.com/isisaddons/isis-jrebel-plugin/master/docs/images/eclipse-run-config-3.png)
 
 
 ## Editing the `.launch` config file directly
@@ -112,7 +112,7 @@ Alternatively, copy one of the example `Xxx-PROTOTYPE-no-fixtures.launch` files 
 
     <stringAttribute 
           key="org.eclipse.jdt.launching.VM_ARGUMENTS" 
-          value="${jrebel_args} -Drebel.log=false -Drebel.packages_exclude=org.apache.isis.core -Drebel.check_class_hash=true -Drebel.plugins=c:/github/danhaywood/isis-jrebel-plugin/target/danhaywood-isis-jrebel-plugin-1.0.0-SNAPSHOT.jar -Disis-jrebel-plugin.packagePrefix=dom.simple -Disis-jrebel-plugin.loggingLevel=warn -XX:MaxPermSize=128m"/>
+          value="${jrebel_args} -Drebel.log=false -Drebel.packages_exclude=org.apache.isis.core -Drebel.check_class_hash=true -Drebel.plugins=c:/github/isisaddons/isis-jrebel-plugin/target/danhaywood-isis-jrebel-plugin-1.0.0-SNAPSHOT.jar -Disis-jrebel-plugin.packagePrefix=dom.simple -Disis-jrebel-plugin.loggingLevel=warn -XX:MaxPermSize=128m"/>
 
 (adjusting the location of the JAR file, the package prefix, and the `MaxPermSize` as necessary)
 
@@ -121,4 +121,4 @@ Alternatively, copy one of the example `Xxx-PROTOTYPE-no-fixtures.launch` files 
 
 As per JRebel's documentation, it's also a good idea to disable any warnings that your IDE might generate about hot-code replacement failing.  For example, in Eclipse this is done through *Windows>Preferences*:
 
-![](https://raw2.github.com/danhaywood/isis-jrebel-plugin/master/docs/images/disable-hot-code-replace.png)
+![](https://raw2.github.com/isisaddons/isis-jrebel-plugin/master/docs/images/disable-hot-code-replace.png)
